@@ -1,24 +1,20 @@
-// a function can be anonymous; 
-// it does not have to have a name. 
-// For example, the function square 
+// a function can be anonymous;
+// it does not have to have a name.
+// For example, the function square
 // could have been defined as:
 
-const square = function (number) {
-    return number * number;
-};
+const square = (number) => number * number;
 console.log(square(4));
 
-function map(f, a) {
-    const result = new Array(a.length);
-    for(let i=0; i< a.length; i++) {
-        result[i] = f(a[i]);
-    }
-    return result;
-}
+// The following example shows a map function
+// that should receive a function as first argument
+//  and an array as second argument:
 
-const cube = function(x) {
-    return Math.pow(x, 3);
-}
+// In the following code, the function receives a function
+// defined by a function expression and executes it for every
+// element of the array received as a second argument:
 
-const numbers = [0,1,2,5,10];
+const map = (f, a) => a.map((item) => f(item));
+const cube = (x) => Math.pow(x, 3);
+const numbers = [0, 1, 2, 5, 10];
 console.log(map(cube, numbers));
