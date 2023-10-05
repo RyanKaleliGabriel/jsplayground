@@ -1,2 +1,1 @@
-const square = (number) => number * number;
-// console.log(square(4));
+const counter = makeCounter();
