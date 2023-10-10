@@ -3,6 +3,7 @@
 //into a new array or object.
 let arr = [1,2,3]
 let arrCopy = [...arr]
+console.log(arrCopy)
 console.log(JSON.stringify(arr) === JSON.stringify(arrCopy));
 console.log(arrCopy === arr)
 arr.push(4)
