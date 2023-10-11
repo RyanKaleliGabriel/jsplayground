@@ -1,3 +1,4 @@
+//A Promise is an object representing the eventual completion or failure of an asynchronous operation. 
 function checkLength(str) {
   return new Promise((resolve, reject) => {
     if (str.length > 1) {
