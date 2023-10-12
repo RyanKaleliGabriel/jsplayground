@@ -16,3 +16,4 @@ async function myDisplayer() {
   console.log(result);
 }
 myDisplayer();
+x = 5
