@@ -1,0 +1,21 @@
+//JSON stands for JavaScript Object Notation
+
+//JSON is a text format for storing and transporting data
+
+//If you parse the JSON string with a JavaScript program, you can access the data as an object
+
+//JSON is language independent *
+
+//Since the format is text only, JSON data can easily be sent between computers,
+// and used by any programming language.
+
+//JavaScript has a built in function for converting JSON strings into JavaScript objects:
+//JSON.parse()
+
+//JavaScript also has a built in function for converting an object into a JSON string
+//JSON.stringify()
+
+//You can receive pure text from a server and use it as a JavaScript object.
+//You can send a JavaScript object to a server in pure text format.
+
+//JSON makes it possible to store JavaScript objects as text

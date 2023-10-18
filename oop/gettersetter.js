@@ -20,6 +20,7 @@ const newCar = new Car("Volvo");
 //even if the getter is a method, you do not use parentheses when you want to get the property value.
 console.log(newCar.carName)
 
+
 //To use a setter, use the same syntax as when you set a property value, without parentheses:
 newCar.carName = "BMW"
 console.log(newCar.carName)
