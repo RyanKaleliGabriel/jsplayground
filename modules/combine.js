@@ -1,3 +1,3 @@
 import message from "./message";
 import {name, age} from "./person";
-message(name, age);
+console.log(message(name, age));

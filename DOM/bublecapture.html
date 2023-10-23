@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- In bubbling the inner most element's event is handled first and then the outer: 
+         the <p> element's click event is handled first, then the <div> element's click event.
+         In capturing the outer most element's event is handled first and then the inner: 
+         the <div> element's click event will be handled first, then the <p> element's click event. -->
+    <style>
+      #myDiv1,
+      #myDiv2 {
+        background-color: coral;
+        padding: 50px;
+      }
+
+      #myP1,
+      #myP2 {
+        background-color: white;
+        font-size: 20px;
+        border: 1px solid;
+        padding: 20px;
+      }
+    </style>
+
+    <h2>JavaScript addEventListener()</h2>
+
+    <div id="myDiv1">
+      <h2>Bubbling:</h2>
+      <p id="myP1">Click me!</p>
+    </div>
+    <br />
+
+    <div id="myDiv2">
+      <h2>Capturing:</h2>
+      <p id="myP2">Click me!</p>
+    </div>
+
+    <!-- The default value is false, which will use the bubbling propagation, 
+    when the value is set to true, the event uses the capturing propagation. -->
+
+    <script>
+      document.getElementById("myDiv1").addEventListener(
+        "click",
+        function () {
+          alert("You have clicked the Orange element");
+        },
+        false
+      );
+      document.getElementById("myP1").addEventListener(
+        "click",
+        function () {
+          alert("You have clicked the white element");
+        },
+        false
+      );
+
+      document.getElementById("myDiv2").addEventListener(
+        "click",
+        function () {
+          alert("You have clicked the orange element");
+        },
+        true
+      );
+      document.getElementById("myP2").addEventListener(
+        "click",
+        function () {
+          alert("You have clicked the white element");
+        },
+        true
+      );
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- The Fetch API interface allows web browser to make HTTP requests to web servers. -->
+    <p id="demo">Fetch a file to change this text.</p>
+    <script>
+      // Fetch is based on async and await
+      getText("C:/Users/RYAN/Documents/WEBPROJECTS/jsplaygorund/webapi/file.txt")
+      async function getText(file) {
+        let myObject = await fetch(file);
+        let myText = await myObject.text();
+        document.getElementById("demo").innerHTML = myText;
+      }
+    </script>
+  </body>
+</html>
